@@ -4,15 +4,17 @@ import 'package:http/http.dart';
 import 'package:http_todo_service/models/post_model.dart';
 
 class HttpService {
-  static String BASE = "6209f31f92946600171c5604.mockapi.io";
+  static String BASE = "jsonplaceholder.typicode.com";
 
-  static Map<String, String> headers = {};
+  static Map<String, String> headers = {
+    'Content-Type': 'application/json; charset=UTF-8',
+  };
 
   // * Http Apis
-  static String API_LIST = "/api/v1/notes";
-  static String API_CREATE = "/api/v1/notes";
-  static String API_UPDATE = "/api/v1/notes/"; //{id}
-  static String API_DELETE = "/api/v1/notes/"; //{id}
+  static String API_LIST = "/posts";
+  static String API_CREATE = "/posts";
+  static String API_UPDATE = "/posts/"; //{id}
+  static String API_DELETE = "/posts/"; //{id}
 
   // * Http Requests
   static Future<String?> GET(String api, Map<String, String> params) async {
@@ -74,3 +76,4 @@ class HttpService {
     return data;
   }
 }
+
