@@ -6,9 +6,7 @@ import 'package:http_todo_service/models/post_model.dart';
 class HttpService {
   static String BASE = "6209f31f92946600171c5604.mockapi.io";
 
-  static Map<String, String> headers = {
-    'Content-Type': 'application/json; charset=UTF-8',
-  };
+  static Map<String, String> headers = {};
 
   // * Http Apis
   static String API_LIST = "/api/v1/notes";
