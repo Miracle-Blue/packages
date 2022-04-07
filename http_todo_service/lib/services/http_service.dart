@@ -21,6 +21,7 @@ class HttpService {
     var uri = Uri.https(BASE, api, params); // http or https
     var response = await get(uri, headers: headers);
     if (response.statusCode == 200) {
+      print(response.body);
       return response.body;
     }
     return null;
@@ -30,6 +31,7 @@ class HttpService {
     var uri = Uri.https(BASE, api); // http or https
     var response = await post(uri, headers: headers, body: jsonEncode(params));
     if (response.statusCode == 201) {
+      print(response.body);
       return response.body;
     }
     return null;
@@ -39,6 +41,7 @@ class HttpService {
     var uri = Uri.https(BASE, api); // http or https
     var response = await put(uri, headers: headers, body: jsonEncode(params));
     if (response.statusCode == 200) {
+      print(response.body);
       return response.body;
     }
     return null;
@@ -48,6 +51,7 @@ class HttpService {
     var uri = Uri.https(BASE, api, params); // http or https
     var response = await delete(uri, headers: headers);
     if (response.statusCode == 200) {
+      print(response.body);
       return response.body;
     }
     return null;
